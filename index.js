@@ -93,6 +93,10 @@ const run = async () => {
       const result = await serviceCollection.deleteOne(query);
       res.send(result);
     });
+
+    app.get("/heroku", (req, res) => {
+      res.send("hero mamu meets hero ku ");
+    });
   } finally {
     // await client.close();
   }
